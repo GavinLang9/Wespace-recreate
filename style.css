@@ -94,7 +94,7 @@ nav a {
 }
 .contact-us {
     
-    width: 120px;
+    min-width: 120px;
     height: 45px;
     margin-left: auto;
     background-color: var(--base-color);
