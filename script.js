@@ -29,3 +29,60 @@ function addOptions(dropdown, list) {
 addOptions(selectLocation, locations);
 addOptions(type, types);
 addOptions(date, dates);
+
+// creates a review element
+function createReview() {
+        let reviewObject = {
+            p: "LeadEngine is a fully packed practical took of premium built and design.  Thus is great for rising undefined businesses looking for a specific customers market",
+            author: {
+                name: "Thomson Zarki",
+                position: "Web Designer"
+            }
+
+        }
+        let review = document.createElement("div");
+        review.classList.add("review");
+    
+        let p = document.createElement("p");
+        let h4 = document.createElement("h4");
+        let h5 = document.createElement("h5");
+
+        p.textContent = reviewObject.p;
+        h4.textContent = reviewObject.author.name;
+        h5.textContent = reviewObject.author.position;
+        review.appendChild(p);
+        review.appendChild(h4);
+        review.appendChild(h5);
+        return review;
+
+}
+
+let reviews = document.getElementById("reviews");
+
+for(let i = 0; i < 4; ++i) {
+    reviews.appendChild(createReview());
+}
+
+let leftArrow = document.getElementsByClassName("move-left")[0];
+let rightArrow = document.getElementsByClassName("move-right")[0];
+
+let positionX = 0;
+let translateHorizontal = 0;
+
+leftArrow.addEventListener("click", () => {
+    if(positionX <= 2 && positionX > 0) {
+        translateHorizontal += 405;
+        reviews.style.transform = "translateX("+ translateHorizontal + "px)";
+        --positionX;
+    } 
+
+})
+
+rightArrow.addEventListener("click", () => {
+    if(positionX >= 0 && positionX < 2) {
+    translateHorizontal -= 405;
+    reviews.style.transform = "translateX("+ translateHorizontal + "px)";
+    ++positionX;
+    }
+})
+console.log(leftArrow.children[0].children);

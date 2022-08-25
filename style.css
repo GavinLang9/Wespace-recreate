@@ -20,15 +20,32 @@ body {
     flex-direction: column;
     align-items: center;
     padding-bottom: 100px;
+    min-width: 970px;
+    overflow-x: hidden;
 }
 
 .wrapper {
     width: 93vw;
+    min-width: 970px;
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
+.heading {
+    color: var(--base-color);
+    font-size: 2.2rem;
+}
+
+p {
+    color: var(--secondary-color);
+}
+
+.section {
+    width: 100%;
+    max-width: 1200px;
+}
 /* Styling for the nav bar start */
 nav {
     position: sticky;
@@ -141,7 +158,6 @@ header h1 {
 
 header p {
     width: 50%;
-    color: var(--secondary-color);
     padding-top: 10px;
 }
 
@@ -279,19 +295,12 @@ header p {
 
 /* Start of Why book styling */
 .whyBook {
-    width: 100%;
-    max-width: 1200px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 .whyBook h2 {
     margin-bottom: 50px;
-
-    color: var(--base-color);
-
-    font-size: 2.2rem;
-
 
 }
 .reasons {
@@ -315,7 +324,6 @@ header p {
 }
 
 .reason p {
-    color: var(--secondary-color);
     font-size: .7rem;
 }
 
@@ -325,8 +333,6 @@ header p {
 
 .workspaces {
     margin-top: 60px;
-    max-width: 1200px;
-    width: 100%;
     display: flex;
     flex-direction: column;
 
@@ -337,12 +343,6 @@ header p {
     justify-content: space-between;
     align-items: top;
     height: 160px;
-}
-
-.workspaces h2 {
-
-    color: var(--base-color);
-    font-size: 2.2rem;
 }
 
 .workspaces p {
@@ -372,7 +372,6 @@ header p {
 
 .workspace .label{
     content: "";
-    /* width: 60%; */
     height: 60px;
     position: absolute;
     bottom: 0;
@@ -395,9 +394,6 @@ header p {
 /* start of productivity styling */
 
 .productivity {
-
-    width: 100%;
-    max-width: 1200px;
     height: 500px;
     display: grid;
     grid-template-columns: 1fr 1fr 2fr;
@@ -411,23 +407,17 @@ header p {
     grid-row: 1 / 2;
     grid-column: 1 / 3;
 
-    font-size: 2.2rem;
-    font-weight: 700;
-    color: var(--base-color);
+
 }
 
 .productivity h3 {
     font-size: 2rem;
-
     color: var(--base-color);
-
 }
+
 .productivity p {
     grid-row: 2 / 3;
     grid-column: 1 / 3;
-
-    
-    color: var(--secondary-color);
 }
 
 .productivity img {
@@ -442,8 +432,6 @@ header p {
 /* Start of needs styling */
 
 .needs {
-    width: 100%;
-    max-width: 1200px;
     height: 400px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -461,9 +449,6 @@ header p {
     width: 500px;
 
     text-align: center;
-    font-size: 2.2rem;
-    font-weight: 700;
-    color: var(--base-color);
 }
 
 .needs h3 {
@@ -472,10 +457,78 @@ header p {
 }
 
 .needs p {
-    color: var(--secondary-color);
     font-size: .9rem;
 }
 
-.needs .stat::before {
-    background-image: ;
+/* End of needs styling */
+
+/* Start of reviews styling */
+
+.reviews-section {
+    margin-top: 100px;
+    position: relative;
 }
+
+.reviews {
+    display: flex;
+    gap: 20px;
+    width: 200%;
+
+    transition: transform 1s ease;
+}
+
+.move-left {
+    position: absolute;
+    top: 20px;
+    right: 80px;
+
+
+}
+
+
+.move-left:hover {
+    cursor: pointer;
+}
+
+.move-right {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+}
+
+
+.move-right:hover {
+    cursor: pointer;
+}
+
+
+.review {
+    display: flex;
+    flex-direction: column;
+   
+    width: 45%;
+    height: 250px;
+
+    padding: 30px;
+
+    box-shadow: 0px 20px 30px 0px rgb(0, 0, 0, 10%);
+}
+
+.review p {
+    font-size: .8rem;
+    line-height: 1.5rem;
+
+    font-weight: 500;
+    color: var(--base-color);
+}
+
+.review h4 {
+    margin-top: 35px;
+    color: var(--base-color);
+}
+
+.review h5 {
+    color: var(--secondary-color);
+    font-weight: 300;
+}
+
