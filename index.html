@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wespace-recreation</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+</head>
+<body>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+    <div class="wrapper">
+        <nav>
+            <ul>
+                <li><h2 class="logo">Wespace</h2></li>
+                <li class="nav-item"><a href="#">Home</a></li>
+                <li class="nav-item"><a href="#workspaces">Workspace</a></li>
+                <li class="nav-item"><a href="#">Service</a></li>
+                <li class="nav-item"><a href="#">Testimonial</a></li>
+                <button class="contact-us">Contact Us</button>            
+            </ul>           
+        </nav>
+        <main>
+            <div class="hero">
+                <header>
+                    <h1 data-aos="fade-right" data-aos-duration="2000">Find The Best Place for Work</h1>
+                    <p data-aos="fade-left" data-aos-duration="2000" data-aos-delay="200">We offer inspiring spaces with inviting design, flexible environment, and genuine experiences, for the thriving communities of business and professionals.</p>
+                </header>
+                <img class="hero-image" src="./images/office.webp" alt="office" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="800">
+                <div class="find-space" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="500">
+                    <h3>Find your space</h3>
+                        <div class="dropdown-style">
+                            <select class="dropdown" name="location" id="location"></select>
+                        </div>
+                        <div class="dropdown-style">
+                            <select class="dropdown" name="type" id="type"></select>
+                        </div>
+                        <div class="dropdown-style">
+                            <select class="dropdown" name="date" id="date"></select>
+                        </div>
+                        <div class="searchNow">
+                            <div>Search Now</div>
+                        </div>
+                </div>
+            </div>
+
+            <div class="whyBook">
+                <h2 data-aos="fade-up" data-aos-duration="2000">Why Book on Wespace</h2>
+                <div class="reasons">
+                    <div class="reason validatedSpaces" data-aos="fade-up" data-aos-duration="2000">
+                        <h4>Validated Spaces</h4>
+                        <p>Over 18,500 spaces and meeting rooms</p>
+                    </div>
+                    <div class="reason trusted" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="200">
+                        <h4>Trusted</h4>
+                        <p>For Entrepeneurs to Fortune 500 companies</p>
+                    </div>
+                    <div class="reason free" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="400">
+                        <h4>100% Free of charge</h4>
+                        <p>Whether a single desk of a team of 100, Coworker never charges you</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="workspaces" class="workspaces">
+                <header>
+                    <h2 data-aos="fade-right" data-aos-duration="2000">Our Workspaces</h2>
+                    <p data-aos="fade-left" data-aos-duration="2000" data-aos-delay="400">Check out our workspaces and find out which one matches your style!</p>
+                </header>
+                <div class="options">
+                    <div class="workspace private-offices" data-aos="fade-up" data-aos-duration="1500">
+                        <img src="./images/private1.png" alt="private office">
+                        <div class="label">
+                            <div>Private Offices</div>
+                        </div>
+                    </div>
+                    <div class="workspace" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"> 
+                        <img src="./images/cowork1.png" alt="coworking space">
+                        <div class="label">
+                            <div>Coworking Spaces</div>
+                        </div>
+                    </div>
+                    <div class="workspace" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"> 
+                        <img class="meeting" src="./images/meeting1.png" alt="meeting room">
+                        <div class="label">
+                            <div>Meeting Rooms</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="productivity">
+                <h2>Working Together Increases productivity</h2>
+                <p>Quisque lorem tortor fringilla sed, vestibulum id, eleifend justo vella ipsum dolor lacus</p>
+                <div class="stat">
+                    <h3>500</h3>
+                    <p>Meeting Room</p>
+                </div>
+                <div class="stat">
+                    <h3>212</h3>
+                    <p>Creative Studio</p>
+                </div>
+                <div class="stat">
+                    <h3>123</h3>
+                    <p>Evant Spaces</p>
+                </div>
+                <div class="stat">
+                    <h3>13</h3>
+                    <p>Countries</p>
+                </div>
+                <img src="./images/desk.png" alt="desk">
+            </div>
+
+            <div class="needs">
+                <h2>Everything You Need to Do Your Best Work</h2>
+                <div class="stat">
+                    <h3>High Speed Wifi</h3>
+                    <p>Quisque lorem tortor fingilla sed</p>
+                </div>
+                <div class="stat">
+                    <h3>Private Offices</h3>
+                    <p>Eleifend justo vella ipsum dolor lacus</p>
+                </div>
+                <div class="stat">
+                    <h3>Furnished</h3>
+                    <p>Eleifend justo vella ipsum dolor lacus</p>
+                </div>
+                <div class="stat">
+                    <h3>Meeting Rooms</h3>
+                    <p>Quisque lorem tortor fingilla sed</p>
+                </div>
+                <div class="stat">
+                    <h3>Air conditioning</h3>
+                    <p>Quisque lorem tortor fingilla sed</p>
+                </div>
+                <div class="stat">
+                    <h3>Full Kitchen</h3>
+                    <p>Eleifend justo vella ipsum dolor lacus</p>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

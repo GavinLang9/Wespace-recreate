@@ -1,0 +1,481 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --base-color: rgb(34, 84, 97);
+    --secondary-color: rgb(132, 144, 150);
+    --dark-base-color: rgb(26, 73, 92);
+    
+}
+
+html {
+    font-size: 18px;
+}
+body {
+    font-family: Poppins;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 100px;
+}
+
+.wrapper {
+    width: 93vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Styling for the nav bar start */
+nav {
+    position: sticky;
+    top: 0;
+
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    
+    padding-inline: 50px;
+
+    background-color: white;
+    z-index: 5;
+}
+
+.logo {
+    margin-right: 50px;
+    font-size: 1.5rem;
+    color: var(--base-color);
+
+}
+
+.logo:hover {
+    cursor: pointer;
+}
+
+nav ul {
+    width: 100%;
+    display: flex;
+    gap: 40px;
+}
+nav li {
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav a {
+    color: var(--base-color);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.2rem;
+    
+}
+.nav-item {
+    position: relative;
+}
+.nav-item::after {
+    content: "";
+    height: 2px;
+    width: 0;
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    background-color: var(--base-color);
+
+    transition: width .5s ease;
+}
+.nav-item:hover::after {
+    width: 100%;
+}
+.contact-us {
+    
+    width: 120px;
+    height: 45px;
+    margin-left: auto;
+    background-color: var(--base-color);
+    color: white;
+    border:none;
+
+    font-size: 1rem;
+}
+
+.contact-us:hover {
+    background-color: var(--dark-base-color);
+    cursor: pointer;
+}
+
+main {
+    width: 80%;
+    min-width: 750px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    /* padding-inline: 50px; */
+    padding-top: 30px;
+    height: 250px;
+    max-width: 1200px;
+}
+
+header h1 {
+    color: var(--base-color);
+    width: 50%;
+    font-size: 2.9rem;
+    font-weight: 600;
+    padding-right: 50px;
+}
+
+header p {
+    width: 50%;
+    color: var(--secondary-color);
+    padding-top: 10px;
+}
+
+/* End of nav styling  */
+
+/* Start of main section styling */
+.hero-image {
+    width: 120%;
+    align-self: center;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 80%);
+    margin-top: 50px;
+    
+}
+
+
+/* start of Find space box styling */
+.find-space {
+    position: absolute;
+    left: 50%;
+    top: 320px;
+    min-width: 300px;
+    min-height: 350px;
+    width: calc(93vw / 3);
+    height: 360px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--base-color);
+    color: white;
+}
+
+.find-space h3 {
+    width: 85%;
+    height: 14.3%;
+    font-size: 1.3rem;
+    padding-top: 20px;
+}
+
+
+.dropdown {
+    font-family: Lato;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    padding-left: 20px;
+
+    color: white;
+    background-color: var(--dark-base-color);
+    border: none;
+
+    appearance: none;
+    background-image: url('./images/dropdown\ arrow.png');
+    background-size: 5%;
+    background-repeat: no-repeat;
+    background-position: right 2.5rem top 35%;
+}
+
+.dropdown:focus {
+    outline: none;
+    background-color: rgb(14, 58, 78);
+}
+
+.dropdown:hover {
+    cursor: pointer;
+}
+.dropdown-style:nth-of-type(1)::before {
+    content: "Location";
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    
+    color: rgb(75, 139, 148);
+
+    font-size: .8rem;
+    pointer-events: none;
+   
+}
+.dropdown-style:nth-of-type(2)::before {
+    content: "Type";
+    position: absolute;
+    top: 10px;
+    left: 20px;
+ 
+    color: rgb(75, 139, 148);
+
+    font-size: .8rem;
+    pointer-events: none;
+
+}
+.dropdown-style:nth-of-type(3)::before {
+    content: "Date";
+    position: absolute;
+    top: 10px;
+    left: 20px;
+
+    color: rgb(75, 139, 148);
+
+    font-size: .8rem;
+    pointer-events: none;
+
+}
+.dropdown-style {
+    width: 85%;
+    height: 55px;
+    overflow: hidden;
+    position: relative;
+    
+}
+
+
+
+.searchNow {
+    width: 85%;
+    height: 40px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    color: white;
+    background-color: rgb(255, 136, 0);
+}
+
+.searchNow:hover {
+    cursor: pointer;
+}
+
+.searchNow:active {
+    background-color: rgb(221, 107, 0);
+}
+
+
+/* End of find you space styling */
+
+/* Start of Why book styling */
+.whyBook {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.whyBook h2 {
+    margin-bottom: 50px;
+
+    color: var(--base-color);
+
+    font-size: 2.2rem;
+
+
+}
+.reasons {
+    min-width: 750px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.reason {
+    width: 31%;
+    height: 110px;
+    padding: 15px;
+    border: 1px solid rgb(210, 227, 238);
+}
+
+.reason h4 {
+    color: var(--base-color);
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.reason p {
+    color: var(--secondary-color);
+    font-size: .7rem;
+}
+
+/* End of Why Book styling */
+
+/* Start of Workspaces styling */
+
+.workspaces {
+    margin-top: 60px;
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.workspaces header {
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    height: 160px;
+}
+
+.workspaces h2 {
+
+    color: var(--base-color);
+    font-size: 2.2rem;
+}
+
+.workspaces p {
+    font-size: 1rem;
+}
+
+
+.workspaces .options {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    
+}
+
+
+
+.workspace {
+    height: 500px;
+    width: 300px;
+    margin: 0;
+    position: relative;
+    
+}
+
+
+.workspace .label{
+    content: "";
+    /* width: 60%; */
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    background-color: var(--base-color);
+    color: white;
+    font-size: 1.2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 1;
+
+}
+
+/* End of workspace styling */
+
+/* start of productivity styling */
+
+.productivity {
+
+    width: 100%;
+    max-width: 1200px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+
+    align-items: center;
+    margin-top: 225px;
+}
+
+.productivity h2 {
+    grid-row: 1 / 2;
+    grid-column: 1 / 3;
+
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--base-color);
+}
+
+.productivity h3 {
+    font-size: 2rem;
+
+    color: var(--base-color);
+
+}
+.productivity p {
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+
+    
+    color: var(--secondary-color);
+}
+
+.productivity img {
+    grid-row: 1 / 5;
+    grid-column: 3 / 4;
+    justify-self: right;
+    filter: saturate(.5);
+}
+
+/* End of productivity styling */
+
+/* Start of needs styling */
+
+.needs {
+    width: 100%;
+    max-width: 1200px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    align-items: center;
+    justify-items: center;
+
+    margin-top: 150px;
+}
+
+.needs h2 {
+    grid-row: 1 / 2;
+    grid-column: 1 / 4;
+    width: 500px;
+
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--base-color);
+}
+
+.needs h3 {
+    font-size: 1.4rem;
+    color: var(--base-color);
+}
+
+.needs p {
+    color: var(--secondary-color);
+    font-size: .9rem;
+}
+
+.needs .stat::before {
+    background-image: ;
+}
