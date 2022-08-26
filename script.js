@@ -30,6 +30,7 @@ addOptions(selectLocation, locations);
 addOptions(type, types);
 addOptions(date, dates);
 
+
 // creates a review element
 function createReview() {
         let reviewObject = {
@@ -63,26 +64,81 @@ for(let i = 0; i < 4; ++i) {
     reviews.appendChild(createReview());
 }
 
+
 let leftArrow = document.getElementsByClassName("move-left")[0];
 let rightArrow = document.getElementsByClassName("move-right")[0];
 
 let positionX = 0;
 let translateHorizontal = 0;
+let reviewWidth = reviews.children[0].clientWidth;
+
+setInterval(updateReviewWidth, 1);
 
 leftArrow.addEventListener("click", () => {
     if(positionX <= 2 && positionX > 0) {
-        translateHorizontal += 405;
+        translateHorizontal += reviewWidth + 20;
+        // moveReviewsLeft();
         reviews.style.transform = "translateX("+ translateHorizontal + "px)";
         --positionX;
     } 
-
+    updateReviewOpacity();
 })
 
 rightArrow.addEventListener("click", () => {
     if(positionX >= 0 && positionX < 2) {
-    translateHorizontal -= 405;
+    translateHorizontal -= reviewWidth + 20;
     reviews.style.transform = "translateX("+ translateHorizontal + "px)";
     ++positionX;
     }
+    updateReviewOpacity();
 })
 console.log(leftArrow.children[0].children);
+console.log(positionX)
+function updateReviewWidth() {
+    reviewWidth = reviews.children[0].clientWidth;
+
+}
+
+function updateReviewOpacity() {
+    if(positionX === 0) {
+        reviews.children[0].style.opacity = '1';
+        reviews.children[1].style.opacity = '1';
+        reviews.children[2].style.opacity = '0';
+        reviews.children[3].style.opacity = '0';
+    } else if(positionX === 1) {
+        reviews.children[0].style.opacity = '0';
+        reviews.children[1].style.opacity = '1';
+        reviews.children[2].style.opacity = '1';
+        reviews.children[3].style.opacity = '0';
+    } else if(positionX === 2) {
+        reviews.children[0].style.opacity = '0';
+        reviews.children[1].style.opacity = '0';
+        reviews.children[2].style.opacity = '1';
+        reviews.children[3].style.opacity = '1';
+    }
+}
+
+
+// function updateReviewOpacity() {
+//     if(positionX === 0) {
+//         reviews.children[0].style.display = 'flex';
+//         reviews.children[1].style.display = 'flex';
+//         reviews.children[2].style.display = 'none';
+//         reviews.children[3].style.display = 'none';
+//     } else if(positionX === 1) {
+//         reviews.children[0].style.display = 'none';
+//         reviews.children[1].style.display = 'flex';
+//         reviews.children[2].style.display = 'flex';
+//         reviews.children[3].style.display = 'none';
+//     } else if(positionX === 2) {
+//         reviews.children[0].style.display = 'none';
+//         reviews.children[1].style.display = 'none';
+//         reviews.children[2].style.display = 'flex';
+//         reviews.children[3].style.display = 'flex';
+//     }
+// }
+// function moveReviewsLeft() {
+//     if(positionX === 0) {
+//         reviews.
+//     }
+// }
