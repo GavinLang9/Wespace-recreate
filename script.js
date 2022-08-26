@@ -31,6 +31,73 @@ addOptions(type, types);
 addOptions(date, dates);
 
 
+// let hamburger = document.getElementById("hamburger");
+// hamburger.addEventListener("click", () => {
+//     if(hamburger.children[0].classList.contains("open-hamburger-top")) {
+//         hamburger.children[0].classList.remove("open-hamburger-top");
+//         hamburger.children[0].classList.add("close-hamburger-top");
+//         hamburger.children[1].classList.remove("open-hamburger-bottom");
+//         hamburger.children[1].classList.add("close-hamburger-bottom");
+//         hamburger.children[2].classList.remove("open-hamburger-middle");
+//         hamburger.children[2].classList.add("close-hamburger-middle");
+//     } else if(hamburger.children[0].classList.contains("close-hamburger-top")) {
+//         hamburger.children[0].classList.remove("close-hamburger-top");
+//         hamburger.children[0].classList.add("open-hamburger-top");
+//         hamburger.children[1].classList.remove("close-hamburger-bottom");
+//         hamburger.children[1].classList.add("open-hamburger-bottom");
+//         hamburger.children[2].classList.remove("close-hamburger-middle");
+//         hamburger.children[2].classList.add("open-hamburger-middle");
+//     } else {
+//         hamburger.children[0].classList.add("open-hamburger-top");
+//         hamburger.children[1].classList.add("open-hamburger-bottom");
+//         hamburger.children[1].classList.add("open-hamburger-middle");
+
+//     }
+// })
+
+var topLine = document.getElementsByClassName("line1")[0];
+var middleLine = document.getElementsByClassName('line2')[0];
+var bottomLine = document.getElementsByClassName('line3')[0];
+var background = document.getElementsByClassName("hamburger-background")[0];
+var box = document.getElementsByClassName('box')[0];
+let li = document.getElementsByClassName("nav-item");
+topLine.classList.remove('animation');
+middleLine.classList.remove('animation');
+bottomLine.classList.remove('animation');
+
+box.addEventListener('click', turnOnAnimation);
+
+// when box is clicked, the reverse animation can occur
+// before, when the screen loaded, the reverse screen animation played automatically
+function turnOnAnimation() {
+    topLine.classList.add('animation');
+    middleLine.classList.add('animation');
+    bottomLine.classList.add('animation');
+}
+
+box.addEventListener("click", () => {
+    if(background.classList.contains("background-open")) {
+        background.classList.remove("background-open");
+        background.classList.add("background-close");
+        for(let i = 0; i < 4; ++i) {
+            li[i].classList.remove("nav-open");
+            li[i].classList.add("nav-close");
+        }
+    } else if(background.classList.contains("background-close")) {
+        background.classList.remove("background-close");
+        background.classList.add("background-open");
+        for(let i = 0; i < 4; ++i) {
+            li[i].classList.remove("nav-close");
+            li[i].classList.add("nav-open");
+        }
+    } else {
+        background.classList.add("background-open");
+        for(let i = 0; i < 4; ++i) {
+            li[i].classList.remove("nav-close");
+            li[i].classList.add("nav-open");        }
+    }
+})
+
 // creates a review element
 function createReview() {
         let reviewObject = {

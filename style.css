@@ -11,28 +11,23 @@
     
 }
 
-@media screen and (min-width: 871px) {
-
 html {
     font-size: 18px;
 }
+
 body {
     font-family: Poppins;
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 970px;
     position: relative;
     padding-bottom: 350px;
 }
-
 .wrapper {
-    width: 93vw;
-    min-width: 970px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow-x: hidden;
 }
 
 .heading {
@@ -43,30 +38,21 @@ body {
 p {
     color: var(--secondary-color);
 }
-
-.section {
-    width: 100%;
-    max-width: 1200px;
-}
 /* Styling for the nav bar start */
+
 nav {
     position: sticky;
     top: 0;
 
-    width: 100%;
-    height: 100px;
     display: flex;
     align-items: center;
     gap: 40px;
     
-    padding-inline: 50px;
-
     background-color: white;
     z-index: 5;
 }
 
 .logo {
-    margin-right: 50px;
     font-size: 1.5rem;
     color: var(--base-color);
 }
@@ -76,16 +62,16 @@ nav {
 }
 
 nav ul {
-    width: 100%;
     display: flex;
-    gap: 40px;
 }
+
 nav li {
     display: inline-block;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 nav a {
     color: var(--base-color);
     text-decoration: none;
@@ -93,9 +79,11 @@ nav a {
     font-size: 1.2rem;
     
 }
+
 .nav-item {
     position: relative;
 }
+
 .nav-item::after {
     content: "";
     height: 2px;
@@ -107,14 +95,12 @@ nav a {
 
     transition: width .5s ease;
 }
+
 .nav-item:hover::after {
     width: 100%;
 }
+
 .contact-us {
-    
-    min-width: 120px;
-    height: 45px;
-    margin-left: auto;
     background-color: var(--base-color);
     color: white;
     border:none;
@@ -127,14 +113,14 @@ nav a {
     cursor: pointer;
 }
 
+/* start of main content styling */
+
 main {
-    width: 80%;
-    min-width: 750px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 50px;
 }
+
 .hero {
     display: flex;
     flex-direction: column;
@@ -143,68 +129,41 @@ main {
 
 header {
     display: flex;
-    /* padding-inline: 50px; */
-    padding-top: 30px;
-    height: 250px;
-    max-width: 1200px;
 }
 
 header h1 {
     color: var(--base-color);
-    width: 50%;
     font-size: 2.9rem;
     font-weight: 600;
-    padding-right: 50px;
-}
-
-header p {
-    width: 50%;
-    padding-top: 10px;
 }
 
 /* End of nav styling  */
 
 /* Start of main section styling */
 .hero-image {
-    width: 120%;
     align-self: center;
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 80%);
-    margin-top: 50px;
-    
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 80%);   
 }
 
 
 /* start of Find space box styling */
 .find-space {
     position: absolute;
-    left: 50%;
-    top: 320px;
-    min-width: 300px;
-    min-height: 350px;
-    width: calc(93vw / 3);
-    height: 360px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
     background-color: var(--base-color);
     color: white;
 }
 
 .find-space h3 {
-    width: 85%;
-    height: 14.3%;
     font-size: 1.3rem;
-    padding-top: 20px;
 }
 
 
 .dropdown {
     font-family: Lato;
-    width: calc(100% + 20px);
-    height: calc(100% + 20px);
-    padding-left: 20px;
 
     color: white;
     background-color: var(--dark-base-color);
@@ -235,8 +194,8 @@ header p {
 
     font-size: .8rem;
     pointer-events: none;
-   
 }
+
 .dropdown-style:nth-of-type(2)::before {
     content: "Type";
     position: absolute;
@@ -247,8 +206,8 @@ header p {
 
     font-size: .8rem;
     pointer-events: none;
-
 }
+
 .dropdown-style:nth-of-type(3)::before {
     content: "Date";
     position: absolute;
@@ -259,22 +218,14 @@ header p {
 
     font-size: .8rem;
     pointer-events: none;
-
 }
-.dropdown-style {
-    width: 85%;
-    height: 55px;
+
+.dropdown-style { 
     overflow: hidden;
-    position: relative;
-    
+    position: relative; 
 }
-
-
 
 .searchNow {
-    width: 85%;
-    height: 40px;
-    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -300,28 +251,19 @@ header p {
     flex-direction: column;
     align-items: center;
 }
-.whyBook h2 {
-    margin-bottom: 50px;
 
-}
 .reasons {
-    min-width: 750px;
-    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 .reason {
-    width: 31%;
-    height: 110px;
-    padding: 15px;
     border: 1px solid rgb(210, 227, 238);
 }
 
 .reason h4 {
     color: var(--base-color);
     font-size: 1.1rem;
-    margin-bottom: 10px;
 }
 
 .reason p {
@@ -333,52 +275,32 @@ header p {
 /* Start of Workspaces styling */
 
 .workspaces {
-    margin-top: 60px;
     display: flex;
     flex-direction: column;
-
 }
 
 .workspaces header {
     display: flex;
     justify-content: space-between;
     align-items: top;
-    height: 160px;
 }
 
 .workspaces p {
     font-size: 1rem;
 }
 
-
 .workspaces .options {
-    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    
-    
 }
-
-
 
 .workspace {
-    
-    max-width: 300px;
-    width: 33%;
-    margin: 0;
     position: relative;
-
 }
-
-.workspace img {
-    width: 100%;
-}
-
 
 .workspace .label{
     content: "";
-    height: 60px;
     position: absolute;
     bottom: 7px;
     right: 0;
@@ -390,9 +312,7 @@ header p {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
     z-index: 1;
-
 }
 
 /* End of workspace styling */
@@ -400,20 +320,8 @@ header p {
 /* start of productivity styling */
 
 .productivity {
-    height: 500px;
     display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-
     align-items: center;
-    margin-top: 225px;
-}
-
-.productivity h2 {
-    grid-row: 1 / 2;
-    grid-column: 1 / 3;
-
-
 }
 
 .productivity h3 {
@@ -421,14 +329,7 @@ header p {
     color: var(--base-color);
 }
 
-.productivity p {
-    grid-row: 2 / 3;
-    grid-column: 1 / 3;
-}
-
 .productivity img {
-    grid-row: 1 / 5;
-    grid-column: 3 / 4;
     justify-self: right;
     filter: saturate(.5);
 }
@@ -438,22 +339,12 @@ header p {
 /* Start of needs styling */
 
 .needs {
-    height: 400px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 15px;
     align-items: center;
     justify-items: center;
-
-    margin-top: 150px;
 }
 
 .needs h2 {
-    grid-row: 1 / 2;
-    grid-column: 1 / 4;
-    width: 500px;
-
     text-align: center;
 }
 
@@ -471,27 +362,16 @@ header p {
 /* Start of reviews styling */
 
 .reviews-section {
-    margin-top: 100px;
     position: relative;
-    height: 400px;
 }
 
 .reviews {
-    display: flex;
-    gap: 20px;
-    width: 200%;
-
-    margin-top: 40px;
-    
+    display: flex;    
     transition: transform 1s ease;
 }
 
 .move-left {
     position: absolute;
-    top: 20px;
-    right: 80px;
-
-
 }
 
 
@@ -501,8 +381,6 @@ header p {
 
 .move-right {
     position: absolute;
-    top: 20px;
-    right: 40px;
 }
 
 
@@ -514,24 +392,18 @@ header p {
 .review {
     display: flex;
     flex-direction: column;
-   
-    width: 45%;
-    height: 250px;
-
-    padding: 30px;
-    
     box-shadow: 0px 20px 30px 0px rgb(0, 0, 0, 10%);
     transition: opacity 1s ease;
 }
 
 .review:nth-of-type(3) {
     opacity: 0;
-    /* display: none; */
 }
+
 .review:nth-of-type(4) {
     opacity: 0;
-    /* display: none; */
 }
+
 .review p {
     font-size: .8rem;
     line-height: 1.5rem;
@@ -541,7 +413,6 @@ header p {
 }
 
 .review h4 {
-    margin-top: 35px;
     color: var(--base-color);
 }
 
@@ -555,31 +426,18 @@ header p {
 /* Start of footer styling */
 
 footer {
-    
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 300px;
-    padding: 50px 100px;
     position: absolute;
     bottom: 0;
     background-color: var(--base-color);
-    margin-top: 30px;
-
-
 }
 
 footer .content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    height: 150px;
 }
 
 footer .content h2 {
-    grid-column: 1 / 2;
-    grid-row: 1 / 3;
-
     color: white;
     font-size: 2rem;
 }
@@ -592,9 +450,7 @@ footer .content .become-member {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 170px;
-    height: 40px;
-
+    
     font-size: .7rem;
     font-weight: 600;
     color: white;
@@ -616,17 +472,332 @@ footer .bottom-content {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
-    height: 70px;
-
-    padding-left: 100px;
 
     color: white;
     background-color: var(--dark-base-color);
 
 }
 
+
+
+body {
+    min-width: 970px;
 }
-@media screen and (max-width: 890px) {
+
+.wrapper {
+    width: 93vw;
+    min-width: 970px;
+    overflow-x: hidden;
+}
+
+.section {
+    width: 100%;
+    max-width: 1200px;
+}
+/* Styling for the nav bar start */
+nav {
+    width: 100%;
+    height: 100px;
     
+    padding-inline: 50px;
+}
+
+.logo {
+    margin-right: 50px;
+}
+
+nav ul {
+    width: 100%;
+    gap: 40px;
+}
+
+.contact-us { 
+    min-width: 120px;
+    height: 45px;
+    margin-left: auto;
+}
+
+#hamburger {
+    display: none;
+}
+
+main {
+    width: 80%;
+    min-width: 750px;
+    margin-top: 50px;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    padding-top: 30px;
+    height: 250px;
+    max-width: 1200px;
+}
+
+header h1 {
+    width: 50%;
+    padding-right: 50px;
+}
+
+header p {
+    width: 50%;
+    padding-top: 10px;
+}
+
+/* End of nav styling  */
+
+/* Start of main section styling */
+.hero-image {
+    width: 120%;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 80%);
+    margin-top: 50px;
+}
+
+/* start of Find space box styling */
+.find-space {
+    left: 50%;
+    top: 320px;
+    min-width: 300px;
+    min-height: 350px;
+    width: calc(93vw / 3);
+    height: 360px;
+
+    gap: 20px;
+}
+
+.find-space h3 {
+    width: 85%;
+    height: 14.3%;
+    padding-top: 20px;
+}
+
+
+.dropdown {
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    padding-left: 20px;
+}
+
+.dropdown-style:nth-of-type(1)::before {
+    top: 10px;
+    left: 20px;
+}
+
+.dropdown-style:nth-of-type(2)::before {
+    top: 10px;
+    left: 20px;
+}
+
+.dropdown-style:nth-of-type(3)::before {
+    top: 10px;
+    left: 20px;
+}
+
+.dropdown-style {
+    width: 85%;
+    height: 55px;
+}
+
+.searchNow {
+    width: 85%;
+    height: 40px;
+}
+
+/* End of find you space styling */
+
+/* Start of Why book styling */
+
+.whyBook h2 {
+    margin-bottom: 50px;
+}
+.reasons {
+    min-width: 750px;
+    width: 100%;
+}
+.reason {
+    width: 31%;
+    height: 120px;
+    padding: 15px;
+    border: 1px solid rgb(210, 227, 238);
+}
+
+.reason h4 {
+    margin-bottom: 10px;
+}
+
+/* End of Why Book styling */
+
+/* Start of Workspaces styling */
+
+.workspaces {
+    margin-top: 60px;
+}
+
+.workspaces header {
+    height: 160px;
+}
+
+.workspaces .options {
+    width: 100%;
+}
+
+.workspace { 
+    max-width: 300px;
+    width: 33%;
+    margin: 0;
+}
+
+.workspace img {
+    width: 100%;
+}
+
+.workspace .label{
+    content: "";
+    height: 60px;
+    bottom: 7px;
+    right: 0;
+
+    padding: 20px;
+    z-index: 1;
+
+}
+
+/* End of workspace styling */
+
+/* start of productivity styling */
+
+.productivity {
+    height: 500px;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+
+    margin-top: 225px;
+}
+
+.productivity h2 {
+    grid-row: 1 / 2;
+    grid-column: 1 / 3;
+}
+
+.productivity p {
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+}
+
+.productivity img {
+    grid-row: 1 / 5;
+    grid-column: 3 / 4;
+}
+
+/* End of productivity styling */
+
+/* Start of needs styling */
+
+.needs {
+    height: 400px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 15px;
+
+    margin-top: 150px;
+}
+
+.needs h2 {
+    grid-row: 1 / 2;
+    grid-column: 1 / 4;
+    width: 500px;
+}
+
+/* End of needs styling */
+
+/* Start of reviews styling */
+
+.reviews-section {
+    margin-top: 100px;
+    height: 400px;
+}
+
+.reviews {
+    gap: 20px;
+    width: 200%;
+
+    margin-top: 40px;
+    
+    transition: transform 1s ease;
+}
+
+.move-left {
+    top: 20px;
+    right: 80px;
+}
+
+.move-right {
+    top: 20px;
+    right: 40px;
+}
+
+.review {
+    width: 45%;
+    height: 250px;
+
+    padding: 30px;
+    
+    box-shadow: 0px 20px 30px 0px rgb(0, 0, 0, 10%);
+    transition: opacity 1s ease;
+}
+
+.review:nth-of-type(3) {
+    opacity: 0;
+}
+.review:nth-of-type(4) {
+    opacity: 0;
+}
+.review p {
+    line-height: 1.5rem;
+}
+
+.review h4 {
+    margin-top: 35px;
+}
+
+/* End of reviews styling */
+
+/* Start of footer styling */
+
+footer {
+    width: 100%;
+    height: 300px;
+    padding: 50px 100px;
+    bottom: 0;
+    margin-top: 30px;
+}
+
+footer .content {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 150px;
+}
+
+footer .content h2 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+
+footer .content .become-member {
+    width: 170px;
+    height: 40px;
+}
+
+footer .bottom-content {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+
+    padding-left: 100px;
 }
